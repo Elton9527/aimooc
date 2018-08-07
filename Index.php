@@ -14,6 +14,47 @@ spl_autoload_register('\\IMooc\\Loader::autoload');
 /*IMooc\Object::test();
 App\Controller\Home\Index::test();*/
 
+# 观察者模式
+/*class Event extends \IMooc\EventGenerator
+{
+    function trigger()
+    {
+        echo "Event<br/>\n";
+        // update 硬编码的做法
+        // echo '逻辑1';
+        // echo '逻辑2';
+
+        // 观察者模式的做法
+        $this->notify();
+    }
+}
+
+class Observer1 implements \IMooc\Observer
+{
+
+    function update()
+    {
+        // TODO: Implement update() method.
+        echo '逻辑1';
+    }
+}
+
+class Observer2 implements \IMooc\Observer
+{
+
+    function update()
+    {
+        // TODO: Implement update() method.
+        echo '逻辑2';
+    }
+}
+
+// 观察者模式的做法
+$event = new Event();
+$event->addObserver(new Observer1);
+$event->addObserver(new Observer2);
+$event -> trigger();*/
+
 # 策略模式
 /*class Page
 {
